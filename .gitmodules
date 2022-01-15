@@ -2,3 +2,7 @@
 	path = RestService
 	url = git@github.com:Webservices02267/RestService.git
 	branch = main
+[submodule "TokenService"]
+	path = TokenService
+	url = git@github.com:Webservices02267/TokenService.git
+	branch = main
