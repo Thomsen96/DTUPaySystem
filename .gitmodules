@@ -1,0 +1,4 @@
+[submodule "RestService"]
+	path = RestService
+	url = git@github.com:Webservices02267/RestService.git
+	branch = main
