@@ -1,0 +1,6 @@
+[submodule "RestService"]
+	path = RestService
+	url = git@github.com:Webservices02267/RestService.git
+[submodule "TokenService"]
+	path = TokenService
+	url = git@github.com:Webservices02267/TokenService.git
