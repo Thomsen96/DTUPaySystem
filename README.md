@@ -2,7 +2,11 @@
 
 The purpose of this repository is to enable local development of all the service in DTU pay with a complete docker-compose file that starts a Rabbit MQ service and all the other services that is needed. and also builds all the projects locally.
 
-The repositories have been added to this repo with git submodules.
+The repositories have been added to this repo with git submodules. to clone the project use:
+
+```bash
+git clone --recurse-submodules -j8 git@github.com:Webservices02267/DTUPaySystem.git
+```
 
 ## Setup of git sub modules (One time thing)
 
