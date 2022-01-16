@@ -2,13 +2,13 @@
 set -e
 
 pushd RestService
-./comleteBuild.sh
+./completeBuild.sh
 popd
 
 pushd TokenService
-./comleteBuild.sh
+./completeBuild.sh
 popd
 
 pushd PaymentService
-./comleteBuild.sh
+./completeBuild.sh
 popd
