@@ -6,3 +6,7 @@
 	path = TokenService
 	url = git@github.com:Webservices02267/TokenService.git
 	branch = main
+[submodule "PaymentService"]
+	path = PaymentService
+	url = git@github.com:Webservices02267/PaymentMicroservice.git
+	branch = master

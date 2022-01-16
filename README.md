@@ -10,6 +10,8 @@ The repositories have been added to this repo with git submodules.
 git submodule add -b main -f git@github.com:Webservices02267/RestService.git RestService
 
 git submodule add -b main -f git@github.com:Webservices02267/TokenService.git TokenService
+
+git submodule add -b master -f git@github.com:Webservices02267/PaymentMicroservice.git PaymentService
 ```
 
 Keep all the submodules in attached HEAD

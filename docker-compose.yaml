@@ -4,7 +4,7 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitMq
     ports:
-      - 8080:8080
+      - 5672:5672
       - 15672:15672
 
   rest:
@@ -24,3 +24,11 @@ services:
       - RABBIT_MQ_HOSTNAME=rabbitMq
     depends_on:
       - rabbitMq
+
+#  payment:
+#    container_name: payment
+#    image: payment-service
+#    environment:
+#      - RABBIT_MQ_HOSTNAME=rabbitMq
+#    depends_on:
+#      - rabbitMq
