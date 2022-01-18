@@ -19,6 +19,8 @@ git submodule add -b master -f git@github.com:Webservices02267/PaymentMicroservi
 
 git submodule add -b main -f git@github.com:Webservices02267/AccountService.git AccountService
 
+git submodule add -b main -f git@github.com:Webservices02267/ReportService.git ReportService
+
 ```
 
 Keep all the submodules in attached HEAD
