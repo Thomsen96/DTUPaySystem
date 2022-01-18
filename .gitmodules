@@ -14,3 +14,7 @@
 	path = AccountService
 	url = git@github.com:Webservices02267/AccountService.git
 	branch = main
+[submodule "ReportService"]
+	path = ReportService
+	url = git@github.com:Webservices02267/ReportService.git
+	branch = main
