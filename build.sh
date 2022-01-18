@@ -9,7 +9,10 @@ pushd TokenService
 ./build.sh
 popd
 
-
 pushd PaymentService
+./build.sh
+popd
+
+pushd AccountService
 ./build.sh
 popd

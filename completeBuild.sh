@@ -12,3 +12,7 @@ popd
 pushd PaymentService
 ./completeBuild.sh
 popd
+
+pushd AccountService
+./completeBuild.sh
+popd
