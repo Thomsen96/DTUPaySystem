@@ -8,7 +8,7 @@
 	branch = main
 [submodule "PaymentService"]
 	path = PaymentService
-	url = git@github.com:Webservices02267/PaymentMicroservice.git
+	url = git@github.com:Webservices02267/PaymentService.git
 	branch = master
 [submodule "AccountService"]
 	path = AccountService
