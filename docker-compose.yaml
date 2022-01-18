@@ -25,10 +25,10 @@ services:
     depends_on:
       - rabbitMq
 
-#  payment:
-#    container_name: payment
-#    image: payment-service
-#    environment:
-#      - RABBIT_MQ_HOSTNAME=rabbitMq
-#    depends_on:
-#      - rabbitMq
+  payment:
+    container_name: payment
+    image: payment-service
+    environment:
+      - RABBIT_MQ_HOSTNAME=rabbitMq
+    depends_on:
+      - rabbitMq
