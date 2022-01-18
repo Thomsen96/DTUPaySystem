@@ -32,3 +32,11 @@ services:
       - RABBIT_MQ_HOSTNAME=rabbitMq
     depends_on:
       - rabbitMq
+
+  account:
+    container_name: account
+    image: account-service
+    environment:
+      - RABBIT_MQ_HOSTNAME=rabbitMq
+    depends_on:
+      - rabbitMq
