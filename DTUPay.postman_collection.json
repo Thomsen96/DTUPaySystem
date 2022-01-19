@@ -128,7 +128,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Have text response is ready\", function () {\r",
-									"  pm.response.to.have.body(\"OK\")\r",
+									"  pm.response.to.have.body(\"Payment service ready\")\r",
 									"});"
 								],
 								"type": "text/javascript"
