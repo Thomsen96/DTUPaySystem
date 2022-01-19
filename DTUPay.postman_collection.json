@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Status",
+			"name": "Service status",
 			"item": [
 				{
 					"name": "Token status",
@@ -31,14 +31,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{protocol}}://{{host}}{{port}}/tokens/status",
+							"raw": "{{protocol}}://{{host}}{{port}}/services/token",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{host}}{{port}}"
 							],
 							"path": [
-								"tokens",
-								"status"
+								"services",
+								"token"
 							]
 						}
 					},
@@ -50,13 +50,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{protocol}}://{{host}}{{port}}/payments",
+							"raw": "{{protocol}}://{{host}}{{port}}/services/payment",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{host}}{{port}}"
 							],
 							"path": [
-								"payments"
+								"services",
+								"payment"
 							]
 						}
 					},
@@ -68,14 +69,33 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{protocol}}://{{host}}{{port}}/customers/status",
+							"raw": "{{protocol}}://{{host}}{{port}}/services/account",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{host}}{{port}}"
 							],
 							"path": [
-								"customers",
-								"status"
+								"services",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}{{port}}/services/account",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}{{port}}"
+							],
+							"path": [
+								"services",
+								"account"
 							]
 						}
 					},
