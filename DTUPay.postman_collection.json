@@ -6,8 +6,80 @@
 	},
 	"item": [
 		{
-			"name": "Status",
+			"name": "Service status",
 			"item": [
+				{
+					"name": "Rest status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Have text response is ready\", function () {\r",
+									"  pm.response.to.have.body(\"Rest service ready\")\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}{{port}}/services/rest",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}{{port}}"
+							],
+							"path": [
+								"services",
+								"rest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Have text response is ready\", function () {\r",
+									"  pm.response.to.have.body(\"Report service ready\")\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}{{port}}/services/report",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}{{port}}"
+							],
+							"path": [
+								"services",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "Token status",
 					"event": [
@@ -20,7 +92,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Have text response is ready\", function () {\r",
-									"  pm.response.to.have.payload(\"Token service is ready\");\r",
+									"  pm.response.to.have.body(\"Token service ready\")\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -31,14 +103,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{protocol}}://{{host}}{{port}}/tokens/status",
+							"raw": "{{protocol}}://{{host}}{{port}}/services/token",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{host}}{{port}}"
 							],
 							"path": [
-								"tokens",
-								"status"
+								"services",
+								"token"
 							]
 						}
 					},
@@ -46,17 +118,35 @@
 				},
 				{
 					"name": "Payment status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Have text response is ready\", function () {\r",
+									"  pm.response.to.have.body(\"Payment service ready\")\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{protocol}}://{{host}}{{port}}/payments",
+							"raw": "{{protocol}}://{{host}}{{port}}/services/payment",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{host}}{{port}}"
 							],
 							"path": [
-								"payments"
+								"services",
+								"payment"
 							]
 						}
 					},
@@ -64,18 +154,35 @@
 				},
 				{
 					"name": "Account status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Have text response is ready\", function () {\r",
+									"  pm.response.to.have.body(\"Sanitity check for account service\")\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{protocol}}://{{host}}{{port}}/customers/status",
+							"raw": "{{protocol}}://{{host}}{{port}}/services/account",
 							"protocol": "{{protocol}}",
 							"host": [
 								"{{host}}{{port}}"
 							],
 							"path": [
-								"customers",
-								"status"
+								"services",
+								"account"
 							]
 						}
 					},
