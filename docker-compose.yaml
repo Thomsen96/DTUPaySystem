@@ -40,3 +40,11 @@ services:
       - RABBIT_MQ_HOSTNAME=rabbitMq
     depends_on:
       - rabbitMq
+
+  report:
+    container_name: report
+    image: report-service
+    environment:
+      - RABBIT_MQ_HOSTNAME=rabbitMq
+    depends_on:
+      - rabbitMq

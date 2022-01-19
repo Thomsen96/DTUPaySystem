@@ -16,3 +16,7 @@ popd
 pushd AccountService
 ./build.sh
 popd
+
+pushd ReportService
+./build.sh
+popd

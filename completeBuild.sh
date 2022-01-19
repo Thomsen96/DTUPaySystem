@@ -16,3 +16,7 @@ popd
 pushd AccountService
 ./completeBuild.sh
 popd
+
+pushd ReportService
+./completeBuild.sh
+popd
