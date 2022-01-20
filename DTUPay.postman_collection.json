@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "318714b4-3244-4524-a5bc-5c64415053f8",
+		"_postman_id": "c9ca077f-469f-4958-becd-a077d21bffbc",
 		"name": "DTU Pay",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -189,6 +189,255 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Bank Requests",
+			"item": [
+				{
+					"name": "Get Accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://fm-00.compute.dtu.dk:80/rest/accounts",
+							"protocol": "http",
+							"host": [
+								"fm-00",
+								"compute",
+								"dtu",
+								"dk"
+							],
+							"port": "80",
+							"path": [
+								"rest",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get merchant account",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://fm-00.compute.dtu.dk:80/rest/accounts/{{test_account_id}}",
+							"protocol": "http",
+							"host": [
+								"fm-00",
+								"compute",
+								"dtu",
+								"dk"
+							],
+							"port": "80",
+							"path": [
+								"rest",
+								"accounts",
+								"{{test_account_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get merchant account2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://fm-00.compute.dtu.dk:80/rest/accounts/{{test_account_id2}}",
+							"protocol": "http",
+							"host": [
+								"fm-00",
+								"compute",
+								"dtu",
+								"dk"
+							],
+							"port": "80",
+							"path": [
+								"rest",
+								"accounts",
+								"{{test_account_id2}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"balance\": {{test_balance}},  \"user\": {    \"cprNumber\": \"123456\",    \"firstName\": \"firstNameTest\",    \"lastName\": \"lastNameTest\"  }}"
+						},
+						"url": {
+							"raw": "http://fm-00.compute.dtu.dk:80/rest/accounts",
+							"protocol": "http",
+							"host": [
+								"fm-00",
+								"compute",
+								"dtu",
+								"dk"
+							],
+							"port": "80",
+							"path": [
+								"rest",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "http://fm-00.compute.dtu.dk:80/rest/accounts/{{test_account_id}}",
+							"protocol": "http",
+							"host": [
+								"fm-00",
+								"compute",
+								"dtu",
+								"dk"
+							],
+							"port": "80",
+							"path": [
+								"rest",
+								"accounts",
+								"{{test_account_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "http://fm-00.compute.dtu.dk:80/rest/accounts/{{test_account_id2}}",
+							"protocol": "http",
+							"host": [
+								"fm-00",
+								"compute",
+								"dtu",
+								"dk"
+							],
+							"port": "80",
+							"path": [
+								"rest",
+								"accounts",
+								"{{test_account_id2}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List of accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://fm-00.compute.dtu.dk:80/rest/accounts",
+							"protocol": "http",
+							"host": [
+								"fm-00",
+								"compute",
+								"dtu",
+								"dk"
+							],
+							"port": "80",
+							"path": [
+								"rest",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make payment/transfer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"amount\": {{test_transfer_amount}},  \"creditor\": \"{{test_transfer_creditor_id}}\",  \"debtor\": \"{{test_transfer_debtor_id}}\", \"description\": \"Test description\"}"
+						},
+						"url": {
+							"raw": "http://fm-00.compute.dtu.dk:80/rest/payments",
+							"protocol": "http",
+							"host": [
+								"fm-00",
+								"compute",
+								"dtu",
+								"dk"
+							],
+							"port": "80",
+							"path": [
+								"rest",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
@@ -227,6 +476,36 @@
 		{
 			"key": "stage",
 			"value": ""
+		},
+		{
+			"key": "test_account_id",
+			"value": "24860dc8-6fe6-410b-a5fa-4fbc2b936478",
+			"type": "string"
+		},
+		{
+			"key": "test_balance",
+			"value": "1000",
+			"type": "string"
+		},
+		{
+			"key": "test_transfer_amount",
+			"value": "100",
+			"type": "string"
+		},
+		{
+			"key": "test_transfer_creditor_id",
+			"value": "24860dc8-6fe6-410b-a5fa-4fbc2b936478",
+			"type": "string"
+		},
+		{
+			"key": "test_transfer_debtor_id",
+			"value": "74e4eb59-2281-4ca5-a4c1-a6d581b8602d",
+			"type": "string"
+		},
+		{
+			"key": "test_account_id2",
+			"value": "74e4eb59-2281-4ca5-a4c1-a6d581b8602d",
+			"type": "string"
 		}
 	]
 }
