@@ -1,6 +1,6 @@
 #!/bin/bash
 git pull
-git submodule init
-git submodule foreach git submodule update
-git submodule foreach ./update.sh
+git submodule update --init
+git submodule foreach git checkout main
+git submodule foreach git submodule update --init
 git submodule foreach git submodule foreach git checkout main
