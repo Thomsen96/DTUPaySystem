@@ -16,7 +16,7 @@ isDirectory() {
 
 isBuildScript() {
     # $1 meaning first argument
-    if [[ $1 == *build*.sh ]]
+    if [[ $1 == *uild*.sh ]]
     then
         # echo "$1"
         set_executable "$1"
