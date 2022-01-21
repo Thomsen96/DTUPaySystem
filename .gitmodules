@@ -18,3 +18,7 @@
 	path = ReportService
 	url = git@github.com:Webservices02267/ReportService.git
 	branch = main
+[submodule "End-to-End"]
+	path = End-to-End
+	url = git@github.com:Webservices02267/End-to-End.git
+	branch = main
