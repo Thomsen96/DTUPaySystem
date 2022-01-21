@@ -7,4 +7,3 @@ set -e
 ./completeBuild.sh
 ./slowDeploy.sh
 ./test.sh
-./stop.sh
