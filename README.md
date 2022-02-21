@@ -5,21 +5,21 @@ The purpose of this repository is to enable local development of all the service
 The repositories have been added to this repo with git submodules. to clone the project use:
 
 ```bash
-git clone --recurse-submodules -j8 git@github.com:Webservices02267/DTUPaySystem.git
+git clone --recurse-submodules -j8 git@github.com:Thomsen96/DTUPaySystem.git
 ```
 
 ## Setup of git sub modules (One time thing)
 
 ``` bash
-git submodule add -b main -f git@github.com:Webservices02267/RestService.git RestService
+git submodule add -b main -f git@github.com:Thomsen96/RestService.git RestService
 
-git submodule add -b main -f git@github.com:Webservices02267/TokenService.git TokenService
+git submodule add -b main -f git@github.com:Thomsen96/TokenService.git TokenService
 
-git submodule add -b master -f git@github.com:Webservices02267/PaymentMicroservice.git PaymentService
+git submodule add -b master -f git@github.com:Thomsen96/PaymentMicroservice.git PaymentService
 
-git submodule add -b main -f git@github.com:Webservices02267/AccountService.git AccountService
+git submodule add -b main -f git@github.com:Thomsen96/AccountService.git AccountService
 
-git submodule add -b main -f git@github.com:Webservices02267/ReportService.git ReportService
+git submodule add -b main -f git@github.com:Thomsen96/ReportService.git ReportService
 
 ```
 
