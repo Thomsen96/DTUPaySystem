@@ -1,24 +1,24 @@
 [submodule "RestService"]
 	path = RestService
-	url = git@github.com:Webservices02267/RestService.git
+	url = git@github.com:Thomsen96/RestService.git
 	branch = main
 [submodule "TokenService"]
 	path = TokenService
-	url = git@github.com:Webservices02267/TokenService.git
+	url = git@github.com:Thomsen96/TokenService.git
 	branch = main
 [submodule "PaymentService"]
 	path = PaymentService
-	url = git@github.com:Webservices02267/PaymentService.git
+	url = git@github.com:Thomsen96/PaymentService.git
 	branch = main
 [submodule "AccountService"]
 	path = AccountService
-	url = git@github.com:Webservices02267/AccountService.git
+	url = git@github.com:Thomsen96/AccountService.git
 	branch = main
 [submodule "ReportService"]
 	path = ReportService
-	url = git@github.com:Webservices02267/ReportService.git
+	url = git@github.com:Thomsen96/ReportService.git
 	branch = main
 [submodule "End-to-End"]
 	path = End-to-End
-	url = git@github.com:Webservices02267/End-to-End.git
+	url = git@github.com:Thomsen96/End-to-End.git
 	branch = main
